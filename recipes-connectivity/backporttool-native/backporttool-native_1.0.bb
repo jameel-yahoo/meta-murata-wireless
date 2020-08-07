@@ -10,6 +10,7 @@ inherit native
 SYSTEMD_AUTO_ENABLE = "disable"
 
 SRC_URI =  "https://github.com/murata-wireless/cyw-fmac/raw/imx-rocko-kong/imx-rocko-kong_r${PV}.tar.gz;name=archive1"
+SRC_URI += "file://0001-murata-customization-version-update.patch;patchdir=${WORKDIR}/imx-rocko-kong_r${PV}"
 SRC_URI += "https://github.com/murata-wireless/meta-murata-wireless/raw/imx-rocko-mini-kong/LICENSE;name=archive99"
 
 SRC_URI[archive1.md5sum] = "7d486f18fed48970054c95ce91ff4898"
